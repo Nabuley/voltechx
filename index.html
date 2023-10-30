@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+    <title>Voltechx</title>
+    <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+    <style>
+        .btn{
+            text-decoration: none;
+            font-size:1.8rem;
+            color:white;
+            padding:10px 20px 10px 20px;
+            margin:20px;
+            display:inline-block;
+            border-radius: 15px;
+            transition:all 0.1s;
+            text-shadow: 0px -2px rgba(0, 0, 0, 0.44);
+            font-family: 'Lobster', cursive;
+        }
+        ._btn{
+            text-decoration: none;
+            font-size:2rem;
+            color:white;
+            padding:10px 23px 10px 23px;
+            margin:20px;
+            display:inline-block;
+            border-radius: 20px;
+            transition:all 0.1s;
+            text-shadow: 0px -2px rgba(0, 0, 0, 0.44);
+            font-family: 'Lobster', cursive;
+        }
+        .btn:active{
+            transform: translateY(3px);
+        }
+        .btn.blue{
+            background-color: #1f75d9; border-bottom:5px solid #165195;
+        }
+        .btn.blue:active{
+            border-bottom:2px solid #165195;
+        }
+        .btn.red{
+            background-color: #ff521e; border-bottom:5px solid #c1370e;
+        }
+        .btn.red:active{
+            border-bottom:2px solid #c1370e;
+        }
+        .btn.green{
+            background-color:rgb(0, 136, 34); border-bottom:5px solid rgb(0, 68, 45);
+        }
+        .btn.green:active{
+            border-bottom:2px solid rgb(0, 68, 45);
+        }
+        .btn.yellow{
+            background-color:rgb(243, 255, 68); border-bottom:5px solid rgb(133, 156, 0);
+        }
+        .btn.yellow:active{
+            border-bottom:2px solid rgb(133, 156, 0);
+        }
+        ._btn.black{
+            background-color:rgb(65, 65, 65); border-bottom:5px solid rgb(0, 0, 0);
+        }
+        ._btn.black:active{
+            border-bottom:2px solid rgb(0, 0, 0);
+        }
+        .btn.black{
+            background-color:rgb(65, 65, 65); border-bottom:5px solid rgb(0, 0, 0);
+        }
+        .btn.black:active{
+            border-bottom:2px solid rgb(0, 0, 0);
+        }
+        ._btn.orange{
+            background-color:rgb(255, 187, 0); border-bottom:5px solid rgb(133, 156, 0);
+        }
+        ._btn.orange:active{
+            border-bottom:2px solid rgb(133, 156, 0);
+        }
+        .btn.purple{
+            background-color:rgb(255, 0, 221); border-bottom:5px solid rgb(100, 0, 87);
+        }
+        .btn.purple:active{
+            border-bottom:2px solid rgb(100, 0, 87);
+        }
+    </style> 
+</head> 
+<body>
+    <h1> Voltechx </h1>
+    <hr>
+    <h2><U>Voltechx</U></h2>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2>home:</h2>
+        <a class = "_btn black" href = "https://nabuley.github.io/voltechx/">home</a>
+    </div>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2>help:</h2>
+        <a class="_btn orange" href="https://nabuley.github.io/voltechx_help/">help</a>
+    </div>
+    <hr>
+    <h2><U>Try Our AI:</U></h2>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2 > MBTI-F </h2>
+        <a class = "btn red" href = "https://wrtn.ai/store/details/chatbot/64f0a645f74cfeb42b431cd5">start</a>
+    </div>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2>MBTI-T</h2>
+        <a class = "btn blue" href = "https://wrtn.ai/store/details/chatbot/653b4023eae5f8a7ba7420ce">start</a>
+    </div>
+    <hr>
+    <h2><U>Who?</U></h2>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2>More Information:</h2>
+        <a class = "btn purple" button id="textButton"><p id="my_Text" style="margin: 0;">open</p></button></a>
+    </div>
+    <p id="Mess"></p>
+    <div style = "display:flex ; align-items:center ; justify-content:start;">
+        <h2>Maker:</h2>
+        <a class = "btn green" button id="Makermess">Maker</button></a>
+    </div>
+    <h3><p id="Maker"></p></h3>
+    <script>
+        var mode=1;
+        var Maker_mode=true;
+        document.getElementById('textButton').addEventListener('click', function() {
+            var my_text=document.getElementById('my_Text');
+            var mess=document.getElementById('Mess');
+            switch (mode){
+                case 1:
+                    my_text.textContent = "close";
+                    mess.innerHTML = "<h3>This site was created for help people.<br>I made these AI with <a href='https://wrtn.ai'>wrtn</a>.<br>Please use it well!</h3>";
+                    mode=2;
+                    break;
+                default:
+                    mode=1;
+                    mess.innerHTML="";
+                    my_text.textContent="open";
+            }
+        });
+        document.getElementById('Makermess').addEventListener('click', function() {
+            var maker=document.getElementById('Maker');
+            if(Maker_mode){
+                maker.textContent="Nabuley";
+                Maker_mode=false;
+                return alert("Nabuley");
+            }else{
+                Maker_mode=true;
+                Maker.textContent="";
+            }
+        });
+    </script>
+</body>
+</html> 
